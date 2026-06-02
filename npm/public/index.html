@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animated Page</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+            animation: fadeIn 2s ease-in-out;
+            text-align: center;
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Moving ball */
+        .ball {
+            width: 40px;
+            height: 40px;
+            background: yellow;
+            border-radius: 50%;
+            position: absolute;
+            animation: moveBall 5s linear infinite;
+        }
+
+        @keyframes moveBall {
+            0%   { left: 0; top: 0; }
+            25%  { left: calc(100% - 40px); top: 0; }
+            50%  { left: calc(100% - 40px); top: calc(100% - 40px); }
+            75%  { left: 0; top: calc(100% - 40px); }
+            100% { left: 0; top: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ball"></div>
+
+    <div class="box">
+        <h2>Hello Biswajit Dey!</h2>
+        <p>Your animated Node.js + Docker app v1.1 is running.</p>
+    </div>
+
+</body>
+</html>
