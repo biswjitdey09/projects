@@ -1,2 +1,2 @@
 # projects
-testing all the app
+testing all the apps
